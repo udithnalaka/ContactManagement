@@ -6,12 +6,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-        <script src="js/contacts.js"></script>
+        <link rel="stylesheet" href="<c:url value="/css/contacts.css" />" ></link>
+        <script type="text/javascript" src=" <c:url value="/js/jquery-1.7.1.min.js" /> "></script>
+ <script type="text/javascript" src=" <c:url value="/js/contacts.js" /> "></script>
+ <script type="text/javascript" src=" <c:url value="/js/slides.jquery.js" /> "></script>
         <title><spring:message code="App.Title"/> </title>
 
     </head>
     <body>
+      <jsp:include page="menubar.html" /> <br></br>
         <h1>My Contacts System</h1>
 
 <table style="border-collapse: collapse;" width="750" align="center" bgcolor="lightyellow" border="1" bordercolor="#006699" height="500">

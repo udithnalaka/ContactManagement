@@ -31,6 +31,11 @@ public class ContactController {
     this.contactBO = contactBO;
   }
 
+  @RequestMapping(value="/home", method= RequestMethod.GET)
+  public String goToHomePage(){
+    return "home";
+  }
+
   @RequestMapping(value="/index" , method= RequestMethod.GET)
   public ModelAndView newUserForm(){
     ModelAndView mv = new ModelAndView("newUser");
