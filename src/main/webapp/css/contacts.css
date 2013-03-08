@@ -112,3 +112,56 @@ ul li.sublinks
             }
 
 /* CSS For image slider End */
+
+
+/* CSS For header and home page - Start */
+body {
+    width: 850px;
+    margin: 20px auto;
+}
+
+#header {
+    height: 120px;
+    background: darkblue;
+    background-image: url('../img/2.jpg');
+    background-repeat: no-repeat;
+}
+
+#title{
+  float:right;
+}
+
+.maintext{
+  border-style: solid;
+  height: 400px;
+  padding: 20px;  
+  background-color: cornflowerblue;
+/*  background-image: url('../img/4.jpg') ;
+  background-repeat: no-repeat;
+  background-position: bottom right;  */
+}
+
+.contactsummary{
+  background-color: #ffffff;
+  border-style: solid;
+  height: 200px;
+  width: 400px;
+  float: left;
+  visibility: hidden;
+  
+}
+
+.imageholder{
+ background-image: url('../img/4.jpg') ;
+  background-repeat: no-repeat;
+  height: 200px;
+/*  background-position: top right;*/
+  margin-left: 550px;
+}
+
+p {
+  font-size: 120%;
+  font-weight: bolder;
+}
+
+/* CSS For header and home page - End */

@@ -15,25 +15,34 @@
 
   <jsp:include page="menubar.html" /> <br></br>
 
-   <h1>My Contacts System</h1>
+  <br><br>
 
-  <div id="slides">
-            <div class="slides_container">
-                <div>
-                  <img src="<c:url value="/img/1.jpg" /> " alt="1">
-                </div>
-                <div>
-                    <img src="<c:url value="/img/2.jpg" /> " alt="2">
-                </div>
-                <div>
-                    <img src="<c:url value="/img/3.jpg" /> " alt="3">
-                </div>
-                <div>
-                    <img src="<c:url value="/img/4.jpg" /> " alt="4">
-                </div>
-            </div>
+      <div class="maintext">
+        <p>
+         My Contacts Application allows the user to Save/View Contact details of family and friends.
+        </p>
+
+        <p>
+         The phase 1 of the application is under development and the main functionality of this
+         phase <br>
+         is to let the user Add, Edit, Delete and Update Contact Information.
+        </p>
+
+        <p>
+          Additional features include uploading a profile image of the contact person.<br>
+            Also, view the number of contacts according to the contact type by placing the <br>
+              cursor on top of the image below.
+        </p>
+        <p>
+         <div id="contactsummary" class="contactsummary"  >
+              
         </div>
-  
+
+        <div id="imageholder" class="imageholder"  />
+       
+        </p>
+
+      </div>
        
 </body>
 </html>

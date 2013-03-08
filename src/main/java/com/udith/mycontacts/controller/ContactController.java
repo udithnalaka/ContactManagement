@@ -6,6 +6,7 @@ import com.udith.mycontacts.model.User;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import net.sf.json.JSONObject;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -97,6 +99,17 @@ public class ContactController {
   public String deleteUser(@RequestParam("user_id") Integer user_id){
     contactBO.deleteContact(user_id);
     return "redirect:viewAllUsers.htm";
+  }
+
+  @RequestMapping(value="/contactsummary", method=RequestMethod.POST)
+  public @ResponseBody String  getContactSummary(@RequestParam("name") String username){
+   
+    JSONObject json = new JSONObject();
+    json.put("family", "3");
+    json.put("friends", "7");
+    json.put("business", "10");
+  
+    return json.toString();
   }
 
   private void validateImage(MultipartFile image) throws ImageUploadException {

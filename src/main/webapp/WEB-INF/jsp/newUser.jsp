@@ -15,7 +15,7 @@
     </head>
     <body>
       <jsp:include page="menubar.html" /> <br></br>
-        <h1>My Contacts System</h1>
+        
 
 <table style="border-collapse: collapse;" width="750" align="center" bgcolor="lightyellow" border="1" bordercolor="#006699" height="500">
 <tbody>

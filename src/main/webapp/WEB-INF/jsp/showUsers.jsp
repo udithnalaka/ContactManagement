@@ -18,7 +18,7 @@
     <body bgcolor="lightyellow" >
 
        <jsp:include page="menubar.html" /> <br></br>
-<h1>My Contacts System</h1>
+
      <center>
 <table id="tblUserList" >
 	<thead>
