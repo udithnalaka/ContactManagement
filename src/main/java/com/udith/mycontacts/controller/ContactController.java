@@ -6,6 +6,7 @@ import com.udith.mycontacts.model.User;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import net.sf.json.JSONObject;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -103,12 +104,15 @@ public class ContactController {
 
   @RequestMapping(value="/contactsummary", method=RequestMethod.POST)
   public @ResponseBody String  getContactSummary(@RequestParam("name") String username){
+
+   Map<String, Integer> contactTypeCountMap = contactBO.getContactSummary();
    
     JSONObject json = new JSONObject();
-    json.put("family", "3");
-    json.put("friends", "7");
-    json.put("business", "10");
-  
+    json.put(User.FAMILY_CONTACT, contactTypeCountMap.get(User.FAMILY_CONTACT));
+    json.put(User.FRIEND_CONTACT, contactTypeCountMap.get(User.FRIEND_CONTACT));
+    json.put(User.BUSINESS_CONTACT, contactTypeCountMap.get(User.BUSINESS_CONTACT));
+    json.put(User.OTHER_CONTACT, contactTypeCountMap.get(User.OTHER_CONTACT));
+
     return json.toString();
   }
 

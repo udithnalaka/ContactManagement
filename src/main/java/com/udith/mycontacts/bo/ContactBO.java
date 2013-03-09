@@ -7,6 +7,7 @@ package com.udith.mycontacts.bo;
 
 import com.udith.mycontacts.model.User;
 import java.util.List;
+import java.util.Map;
 
 
 public interface ContactBO {
@@ -16,7 +17,6 @@ public interface ContactBO {
   public void deleteContact(Integer userId);
   public List<User> getAllContacts();
   public User getContactById(Integer userId);
-  
-
+  public Map<String,Integer> getContactSummary();
 
 }

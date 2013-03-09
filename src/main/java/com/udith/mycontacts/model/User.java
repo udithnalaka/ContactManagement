@@ -19,6 +19,11 @@ import org.hibernate.annotations.Cascade;
 @Table(name="user")
 public class User implements Serializable {
 
+  public static final String BUSINESS_CONTACT = "business";
+  public static final String FAMILY_CONTACT = "family";
+  public static final String FRIEND_CONTACT = "friend";
+  public static final String OTHER_CONTACT = "other";
+
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   @Column(name ="user_id")

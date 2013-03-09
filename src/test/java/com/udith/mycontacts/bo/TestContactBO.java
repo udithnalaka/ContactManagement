@@ -9,6 +9,7 @@ import com.udith.mycontacts.dao.ContactDAO;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
 import static org.mockito.Mockito.*;
 
 
@@ -32,7 +33,7 @@ public class TestContactBO {
     @Test
     public void whenListOfContactsHasValues(){
 
-      List mockedArrayList = mock(List.class);
+      List<User> mockedArrayList = new ArrayList();
       mockedArrayList.add(mockedUser);
       mockedArrayList.add(mockedUser);
       mockedArrayList.add(mockedUser);
@@ -41,9 +42,16 @@ public class TestContactBO {
 
       List userList = mockedDAO.getAllContacts();
       
-      //verify(mockedDAO, times(1)).getAllContacts();
+      verify(mockedDAO, times(1)).getAllContacts();
 
-     Assert.assertEquals(0, userList.size());
+      Assert.assertEquals(3, userList.size());
+
+    }
+
+    @Test
+    public void ContactSummary(){
+      
+      
 
     }
 

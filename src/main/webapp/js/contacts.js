@@ -52,9 +52,11 @@ $(document).ready(function(){
           //alert('inside beforeSend handler');
         },
         success: function(returnedData){          
-          $('#contactsummary').html(  returnedData.friends + " - Friend Contacts <br> "+
+          $('#contactsummary').html("<b> You have, </b> <br>" +
+                  returnedData.friend + " - Friend Contacts <br> "+
                   returnedData.family + " - Family Contacts <br> " +
-                  returnedData.business + " - Business Contacts");
+                  returnedData.business + " - Business Contacts <br> " +
+                  returnedData.other + " - Other Contacts");
         },
         error: function(jqXHR, exception){
           alert('inside error handler');
