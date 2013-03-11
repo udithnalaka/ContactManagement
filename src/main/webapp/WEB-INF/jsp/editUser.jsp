@@ -35,7 +35,7 @@
               <table style="border-collapse: collapse;" width="500" border="0" bordercolor="#006699" cellpadding="2" cellspacing="2">
               <tbody>
                   <tr>
-                    <td width="150"><form:input id="user_id" path="user_id" disabled="true" ></form:input></td>
+                    <td width="150"><form:input id="user_id" path="user_id"  ></form:input></td>
                   </tr>
                   <tr>
                       <td width="100" align="right">Username :</td>

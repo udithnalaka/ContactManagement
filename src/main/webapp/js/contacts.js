@@ -58,8 +58,7 @@ $(document).ready(function(){
                   returnedData.business + " - Business Contacts <br> " +
                   returnedData.other + " - Other Contacts");
         },
-        error: function(jqXHR, exception){
-          alert('inside error handler');
+        error: function(jqXHR, exception){          
             if (jqXHR.status === 0) {
                 alert('Connection error.\n Verify Network.');
             } else if (jqXHR.status == 404) {

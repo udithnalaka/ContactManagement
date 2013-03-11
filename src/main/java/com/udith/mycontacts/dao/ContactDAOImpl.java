@@ -20,8 +20,8 @@ public class ContactDAOImpl implements ContactDAO {
 
   @Override
   public void saveContact(User user) {
-    //hibernateTemplate.saveOrUpdate(user);
-    hibernateTemplate.persist(user);
+    hibernateTemplate.saveOrUpdate(user);
+    //hibernateTemplate.persist(user);
   }
 
   @Override
@@ -43,7 +43,5 @@ public class ContactDAOImpl implements ContactDAO {
   public User getContactById(Integer userId) {
     return hibernateTemplate.get(User.class, userId);
   }
-
-
-
+ 
 }
